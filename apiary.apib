@@ -276,8 +276,9 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + Name: Sample Slate Device (string, required) - The name of the device.
 + MacAddress: AA:BB:CC:DD:EE:FF (string, required) - The MAC address for the device.
 + SerialNumber: `serial` (string, required) - The Serial Number of the device.
-+ Type: SlatePos (Device Type Enumeration, required) - The type of device trying to register.
-
++ Type (Device Type Enumeration, required) - The type of device trying to register.
+    + Default 
+        + SlatePos
 ## Encoded Image (object)
 + Image: `base64encoded string` (string) - The image as a base 64 encoded string.
 + MimeType (enum[string]) - The image type.
@@ -290,7 +291,9 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + EventId: 1 (number) - The identifier for the event.
 + EventName: MyEvent (string) - The name of the event.
 + EventNumber: 1 (number) - The number assigned to the event.
-+ ScheduleType: Daily (Schedule Type Enumeration) - The schedule type (Daily, Weekly, Monthly, Custom).
++ ScheduleType (Schedule Type Enumeration) - The schedule type (Daily, Weekly, Monthly, Custom).
+    + Default 
+        + Daily
 + Capacity: 100 (number) - The capacity of the event.
 + EventStartDateTime: `2017-04-23T12:00:00.123` (string) - The start time of the event.
 + EventStopDateTime: `2017-04-23T13:00:00.321Z` (string) - The stop time of the event.
@@ -305,8 +308,12 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + Value: my_value (string, required) - The value for the pair.
 
 ## Operatorational Requirements Base (object)
-+ CustomerIdentificationRequirement: CustomerNumber (Customer Identification Requirement) - Identification requirements for a customer using the device.
-+ OperatorLoginRequirements: PickListAndOperatorNumber (Operator Session Begin Methods) - Login requirements for an operator of the device.
++ CustomerIdentificationRequirement (Customer Identification Requirement) - Identification requirements for a customer using the device.
+    + Default
+        + CustomerNumber
++ OperatorLoginRequirements (Operator Session Begin Methods) - Login requirements for an operator of the device.
+    + Default
+        + PickListAndOperatorNumber
 + TsopProductVersion: 4.0.0.0 (string) - The product version of Transact OnPremise running on the server.
 
 ## Product Base (object)
@@ -314,7 +321,9 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + ProductDetailId: 1 (number) - The product detail id.
 + ProductNumber: somenumber (string) - The product number.
 + ProductDescription: somedescription (string) - The description of the product.
-+ ProductType: Standard (Product Type Enumeration) - The product type.
++ ProductType (Product Type Enumeration) - The product type.
+    + Default
+        + Standard
 + TaxScheduleId: 1 (number) - The id of the tax schedule associated with this product.
 + TaxGroupId: 1 (number) - The id of the tax group this product belongs to.
 + RetailPrice: 1.00 (number) - The retail price of the product.
@@ -335,11 +344,11 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 
 ## Role Base (object)
 + RoleId: `065dfe36-7694-4571-b86c-d9bedacdbf77`(string) - Unique identifier for the role.
-+ Rights (array) - List of rights assigned to the role.
++ Rights (array[Rights Enumeration]) - List of rights assigned to the role.
     + Default
-        + PosPriv (Rights Enumeration)
-        + AgeVerify (Rights Enumeration)
-        + CancelTransaction (Rights Enumeration)
+        + PosPriv
+        + AgeVerify
+        + CancelTransaction
 
 ## Stored Value Account Base (object)
 + TypeId: 1 (number) - The identifier for the type of stored value account.
@@ -461,14 +470,20 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + BoardPeriods (array[Board Period Base]) - List of all meal periods.
 + CardFormats (array[Card Format Base]) - List of card formats.
 + Operators (array[Operator Base]) - List of operators allowed to operate the device.
-+ Discounts: 10, 15 (array[number]) - A list of 0 or more discount percentages.
++ Discounts (array[number]) - A list of 0 or more discount percentages.
+    + Default
+        + 10
+        + 15
 + Events (array[Event Base]) - List of all events supported by the device.
 + MealTypes (array[Meal Type Base]) - List of all meal types.
 + OperationalRequirements (Operatorational Requirements Base) - Operator and Customer requirements and product version.
 + Products (array[Product Base]) - List of products for the device.
 + Roles (array[Role Base]) - List of roles that can be assigned to an operator.
 + StoredValueAccounts (array[Stored Value Account Base]) - List of all stored value accounts supported on the device.
-+ Surcharges: 5, 10 (array[number]) - A list of 0 or more surcharge percentages.
++ Surcharges (array[number]) - A list of 0 or more surcharge percentages.
+    + Default
+        + 5
+        + 10
 + TaxSchedules (array[Tax Schedule Base]) - List of tax schedules for the device.
 + Tenders (array[Tender Base]) - List of tenders for the device.
 + Properties (array[NameValuePair]) - Properties bag for the device.
