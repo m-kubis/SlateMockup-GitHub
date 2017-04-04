@@ -12,46 +12,34 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + Attributes
     + id: `cccccccc-cccc-cccc-cccc-cccccccccccc` - The unique identifier for the customer (GUID).
 
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Customer Board Balance Get Response)
 
 ### Customer Event Balance Get [GET /customer/{id}/balance/event]
 + Attributes
     + id: `cccccccc-cccc-cccc-cccc-cccccccccccc` - The unique identifier for the customer (GUID).
 
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Customer Event Balance Get Response)
 
 ### Customer Stored Value Balance Get [GET /customer/{id}/balance/storedvalue]
 + Attributes
     + id: `cccccccc-cccc-cccc-cccc-cccccccccccc` - The unique identifier for the customer (GUID).
 
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Customer Stored Value Balance Get Response)
     
     
 ## Customer Management [/customer]
 
 ### Customer Credential Verify [POST /customer/credential/verify]
-+ Request (application/json)
++ Request (application/json; charset=UTF-8)
     + Attributes (Customer Credential Verify Request)
 
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Customer Credential Verify Response)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=UTF-8)
     - Response code 400 is returned if there is a problem with any of the request parameters.
     + Attributes (Response 400 Error)
 
@@ -59,10 +47,7 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + Attributes
     + id: `cccccccc-cccc-cccc-cccc-cccccccccccc` - The unique identifier for the customer (GUID).
 
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Customer Get Response)
 
 # Group Device
@@ -70,16 +55,13 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 ## Device Operation [/device]
 
 ### Device Heartbeat [POST /device/heartbeat]
-+ Request (application/json)
++ Request (application/json; charset=UTF-8)
     + Attributes (Device Heartbeat Request)
     
-+ Response 201 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 201 (application/json; charset=UTF-8)
     + Attributes (Device Heartbeat Response)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=UTF-8)
     - Response code 400 is returned if there is a problem with any of the request parameters.
     + Attributes (Response 400 Error)
 
@@ -87,10 +69,7 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + Attributes
     + id: `ffffffff-ffff-ffff-ffff-ffffffffffff` (string, required) - The unique identifier assigned to the device.
 
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Operators Get Response)
     
 
@@ -98,24 +77,18 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + Attributes
     + id: `ffffffff-ffff-ffff-ffff-ffffffffffff` (string, required) - The unique identifier assigned to the device.
 
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Device Settings Response)
 
 ### Register a device [POST /device/register]
-+ Request (application/json)
++ Request (application/json; charset=UTF-8)
     + Attributes (Device Registration Request)
     
-+ Response 201 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 201 (application/json; charset=UTF-8)
             Location: /device/ffffffff-ffff-ffff-ffff-ffffffffffff
     + Attributes (Device Registration Response)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=UTF-8)
     - Response code 400 is returned if there is a problem with any of the request parameters.
     + Attributes (Response 400 Error)
     
@@ -125,59 +98,47 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 ## Operator Management [/operator]
 
 ### Operator Session Begin [POST /operator/session/begin]
-+ Request (application/json)
++ Request (application/json; charset=UTF-8)
     + Attributes (Operator Session Begin Request)
     
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Operator Session Begin Response)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=UTF-8)
     - Response code 400 is returned if there is a problem with any of the request parameters.
     + Attributes (Response 400 Error)
 
 ### Operator Session End [POST /operator/session/end]
-+ Request (application/json)
++ Request (application/json; charset=UTF-8)
     + Attributes (Operator Session End Request)
     
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Operator Session End Response)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=UTF-8)
     - Response code 400 is returned if there is a problem with any of the request parameters.
     + Attributes (Response 400 Error)
 
 
 ### Operator PIN Change [PUT /operator/pinchange]
-+ Request (application/json)
++ Request (application/json; charset=UTF-8)
     + Attributes (Operator PIN Change Request)
     
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Operator PIN Change Response)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=UTF-8)
     - Response code 400 is returned if there is a problem with any of the request parameters.
     + Attributes (Response 400 Error)
 
 ### Operator Validate [POST /operator/validate]
-+ Request (application/json)
++ Request (application/json; charset=UTF-8)
     + Attributes (Operator Validate Request)
     
-+ Response 200 (application/json)
-    + Headers
-    
-            Content-Type: application/json; charset=UTF-8
++ Response 200 (application/json; charset=UTF-8)
     + Attributes (Operator Validate Response)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=UTF-8)
     - Response code 400 is returned if there is a problem with any of the request parameters.
     + Attributes (Response 400 Error)
 
@@ -276,7 +237,9 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + PinChangeRequired: false (boolean) - Does the operator have to change their pin.
 + CardNumber: 600001 (string) - The operator`s card number.
 + IssueNumber: null (string) - The operator`s card issue number.
-+ Roles (array[string]) - The list of roles (identified as a list of guids corresponding to role ids) assigned to the operator.
++ Roles (array) - The list of roles (identified as a list of guids corresponding to role ids) assigned to the operator.
+    + Default
+        + `065dfe36-7694-4571-b86c-d9bedacdbf77` (string)
         
 ## Credential Enumeration (enum[string])
 + Track2 - Credential origin is from a card swipe of Track2 data.
@@ -309,13 +272,11 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + LastModUsername: t (string) - Last Modified User Name.
 + DoorExtendedUnlockAllowed: F (string) - Denotes whether or not the customer will have an extended unlock on door devices.
 
-## Customer Identification Requirements Base (object)
-
 ## Device Registration Base (object)
 + Name: Sample Slate Device (string, required) - The name of the device.
 + MacAddress: AA:BB:CC:DD:EE:FF (string, required) - The MAC address for the device.
 + SerialNumber: `serial` (string, required) - The Serial Number of the device.
-+ Type (Device Type Enumeration, required) - The type of device trying to register.
++ Type: SlatePos (Device Type Enumeration, required) - The type of device trying to register.
 
 ## Encoded Image (object)
 + Image: `base64encoded string` (string) - The image as a base 64 encoded string.
@@ -329,7 +290,7 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + EventId: 1 (number) - The identifier for the event.
 + EventName: MyEvent (string) - The name of the event.
 + EventNumber: 1 (number) - The number assigned to the event.
-+ ScheduleType (Schedule Type Enumeration) - The schedule type (Daily, Weekly, Monthly, Custom).
++ ScheduleType: Daily (Schedule Type Enumeration) - The schedule type (Daily, Weekly, Monthly, Custom).
 + Capacity: 100 (number) - The capacity of the event.
 + EventStartDateTime: `2017-04-23T12:00:00.123` (string) - The start time of the event.
 + EventStopDateTime: `2017-04-23T13:00:00.321Z` (string) - The stop time of the event.
@@ -344,8 +305,8 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + Value: my_value (string, required) - The value for the pair.
 
 ## Operatorational Requirements Base (object)
-+ CustomerIdentificationRequirement (Customer Identification Requirement) - Identification requirements for a customer using the device.
-+ OperatorLoginRequirements (Operator Session Begin Methods) - Login requirements for an operator of the device.
++ CustomerIdentificationRequirement: CustomerNumber (Customer Identification Requirement) - Identification requirements for a customer using the device.
++ OperatorLoginRequirements: PickListAndOperatorNumber (Operator Session Begin Methods) - Login requirements for an operator of the device.
 + TsopProductVersion: 4.0.0.0 (string) - The product version of Transact OnPremise running on the server.
 
 ## Product Base (object)
@@ -353,7 +314,7 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + ProductDetailId: 1 (number) - The product detail id.
 + ProductNumber: somenumber (string) - The product number.
 + ProductDescription: somedescription (string) - The description of the product.
-+ ProductType(Product Type Enumeration) - The product type.
++ ProductType: Standard (Product Type Enumeration) - The product type.
 + TaxScheduleId: 1 (number) - The id of the tax schedule associated with this product.
 + TaxGroupId: 1 (number) - The id of the tax group this product belongs to.
 + RetailPrice: 1.00 (number) - The retail price of the product.
@@ -374,7 +335,11 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 
 ## Role Base (object)
 + RoleId: `065dfe36-7694-4571-b86c-d9bedacdbf77`(string) - Unique identifier for the role.
-+ Rights (array[Rights Enumeration]) - List of rights assigned to the role.
++ Rights (array) - List of rights assigned to the role.
+    + Default
+        + PosPriv (Rights Enumeration)
+        + AgeVerify (Rights Enumeration)
+        + CancelTransaction (Rights Enumeration)
 
 ## Stored Value Account Base (object)
 + TypeId: 1 (number) - The identifier for the type of stored value account.
@@ -450,14 +415,16 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + DateTimeUTC: `2012-04-23T18:25:43.511Z` (string) - (DateTime object) The date and time currently on the device.
 + DateTimeOffset: `-07:00` (string) - The UTC offset of the location the device is currently in.
 + SoftwareVersion: 1.0.0.0 (string) - The current software version installed on the device.
-+ Device Type (Device Type Enumeration) - The type of device.
++ Device Type: SlatePos (Device Type Enumeration) - The type of device.
 
 ## Device Heartbeat Response (object)
 + Include Request Id
 + DateTimeUTC: `2012-04-23T18:25:43.511Z` (string) - (DateTime object) The date and time of the server.
 + DateTimeOffset: `-07:00` (string) - The UTC offset of the location the server is currently in.
 + SoftwareVersion: 1.0.0.0 (string) - The latest software version available on the server.
-+ Updates (array[Update Enumeration]) - The update actions that should be taken by the device.
++ Updates (array) - The update actions that should be taken by the device.
+    + Default
+        + Settings (Update Enumeration)
 
 ## Operator Session Begin Request (object)
 + Include Request Id
@@ -494,14 +461,14 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + BoardPeriods (array[Board Period Base]) - List of all meal periods.
 + CardFormats (array[Card Format Base]) - List of card formats.
 + Operators (array[Operator Base]) - List of operators allowed to operate the device.
-+ Discounts (array[number]) - A list of 0 or more discount percentages.
++ Discounts: 10, 15 (array[number]) - A list of 0 or more discount percentages.
 + Events (array[Event Base]) - List of all events supported by the device.
 + MealTypes (array[Meal Type Base]) - List of all meal types.
 + OperationalRequirements (Operatorational Requirements Base) - Operator and Customer requirements and product version.
 + Products (array[Product Base]) - List of products for the device.
 + Roles (array[Role Base]) - List of roles that can be assigned to an operator.
 + StoredValueAccounts (array[Stored Value Account Base]) - List of all stored value accounts supported on the device.
-+ Surcharges (array[number]) - A list of 0 or more surcharge percentages.
++ Surcharges: 5, 10 (array[number]) - A list of 0 or more surcharge percentages.
 + TaxSchedules (array[Tax Schedule Base]) - List of tax schedules for the device.
 + Tenders (array[Tender Base]) - List of tenders for the device.
 + Properties (array[NameValuePair]) - Properties bag for the device.
