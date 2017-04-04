@@ -237,7 +237,7 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + PinChangeRequired: false (boolean) - Does the operator have to change their pin.
 + CardNumber: 600001 (string) - The operator`s card number.
 + IssueNumber: null (string) - The operator`s card issue number.
-+ Roles (array) - The list of roles (identified as a list of guids corresponding to role ids) assigned to the operator.
++ Roles (array[string]) - The list of roles (identified as a list of guids corresponding to role ids) assigned to the operator.
     + Default
         + `065dfe36-7694-4571-b86c-d9bedacdbf77` (string)
         
@@ -279,6 +279,7 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + Type (Device Type Enumeration, required) - The type of device trying to register.
     + Default 
         + SlatePos
+        
 ## Encoded Image (object)
 + Image: `base64encoded string` (string) - The image as a base 64 encoded string.
 + MimeType (enum[string]) - The image type.
@@ -298,6 +299,7 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + EventStartDateTime: `2017-04-23T12:00:00.123` (string) - The start time of the event.
 + EventStopDateTime: `2017-04-23T13:00:00.321Z` (string) - The stop time of the event.
 + DateTimeOffset: `-07:00` (string) - The UTC offset of the included DateTime objects.
+
 ## Meal Type Base (object)
 + Id: 1 (number) - Board Meal Type Identifier.
 + Name: Meal Type (string) - Meal Type Name.
