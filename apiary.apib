@@ -426,16 +426,18 @@ This is the API documentation for the Blackboard Transact Slate project.  The in
 + DateTimeUTC: `2012-04-23T18:25:43.511Z` (string) - (DateTime object) The date and time currently on the device.
 + DateTimeOffset: `-07:00` (string) - The UTC offset of the location the device is currently in.
 + SoftwareVersion: 1.0.0.0 (string) - The current software version installed on the device.
-+ Device Type: SlatePos (Device Type Enumeration) - The type of device.
++ Device Type (Device Type Enumeration) - The type of device.
+    + Default
+        + SlatePos
 
 ## Device Heartbeat Response (object)
 + Include Request Id
 + DateTimeUTC: `2012-04-23T18:25:43.511Z` (string) - (DateTime object) The date and time of the server.
 + DateTimeOffset: `-07:00` (string) - The UTC offset of the location the server is currently in.
 + SoftwareVersion: 1.0.0.0 (string) - The latest software version available on the server.
-+ Updates (array) - The update actions that should be taken by the device.
++ Updates (array[Update Enumeration]) - The update actions that should be taken by the device.
     + Default
-        + Settings (Update Enumeration)
+        + Settings
 
 ## Operator Session Begin Request (object)
 + Include Request Id
